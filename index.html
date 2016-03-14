@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="todoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>todo list</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app/js/app.js"></script>
+    <script src="app/js/todoController.js"></script>
+    <link rel="stylesheet" type="text/css" href="app/index.css">
+    <link href='https://fonts.googleapis.com/css?family=Gruppo|Poppins|Open+Sans|Jura|Audiowide|Playball|Lobster|Lobster+Two|Amaranth|Fugaz+One' rel='stylesheet' type='text/css'>
+  </head>
+  <body ng-controller="todoController" ng-init="items=[]">
+    <h1> todo list </h1>
+    <input type="text" ng-model="stuff">
+    <button ng-click="storeInfo()">Submit</button><br>
+    <p ng-bind="storage"></p>
+
+    <div ng-repeat="item in items">
+      {{item}}
+    </div>
+
+  </body>
+</html>
